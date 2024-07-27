@@ -1,0 +1,14 @@
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+
+# Python cache
+.pytest_cache/
+
+# Virtual environment
+venv/
+
+# Test report dir
+test-reports/
+
+# IntelliJ IDEA
+.idea/
