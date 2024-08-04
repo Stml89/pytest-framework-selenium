@@ -1,0 +1,7 @@
+"""Strings involving the login page. i.e. usernames, passwords, and URLS."""
+TEST_USER = "standard_user"
+STANDARD_USER = "standard_user"
+STANDARD_PASSWORD = "secret_sauce"
+PROBLEM_USER = "problem_user"
+LOCKED_OUT_USER = "locked_out_user"
+EMPTY_STRING = ""

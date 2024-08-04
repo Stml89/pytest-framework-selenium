@@ -5,6 +5,7 @@ import pytest
 class TestCalculator:
     """Tests, related to calculator"""
     @staticmethod
+    @pytest.mark.unittests
     @pytest.mark.smoke
     def test_sum_2_integers(calculator):
         """
@@ -16,6 +17,7 @@ class TestCalculator:
         logging.info("Successfully verified that `addition` works correctly")
 
     @staticmethod
+    @pytest.mark.unittests
     @pytest.mark.smoke
     def test_concatenate_2_strings(calculator):
         """
@@ -28,6 +30,7 @@ class TestCalculator:
 
     @staticmethod
     @pytest.mark.xfail(reason="This test is failing due to <put your reason here>")
+    @pytest.mark.unittests
     @pytest.mark.regression
     def test_concatenate_int_and_string(calculator):
         """
