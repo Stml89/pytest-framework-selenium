@@ -88,8 +88,6 @@ Made by Siarhei Stamal for Python Test Automation course.
      - `product_page - All product page related tests`
      - `product_sort - All product page tests related to sorting`
      - `uitests - Run ALL UI tests`
-   + Unit tests
-     - `unittests - Run ALL unittests`
    + Common
      - `regression - Run the regression test suite`
      - `smoke - Run the smoke test suite`
