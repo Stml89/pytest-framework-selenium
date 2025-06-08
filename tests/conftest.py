@@ -1,7 +1,6 @@
 from datetime import datetime
 import pytest
 from pathlib import Path
-from source.calculator import Calculator
 import logging
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -83,11 +82,3 @@ def finalizer(web_driver):
     logging.info("Closing Webdriver")
     web_driver.close()
     web_driver.quit()
-
-
-@pytest.fixture
-def calculator():
-    calc = Calculator()
-    logging.debug(f"Execute fixture before")
-    yield calc
-    logging.debug(f"Execute fixture after")

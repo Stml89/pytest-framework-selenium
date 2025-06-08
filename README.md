@@ -1,8 +1,11 @@
 ## About
 
 ---
-This is a simple example of a test automation repository structure.
-Made by Siarhei Stamal for Python Test Automation course
+This is a simple example of a test automation project for testing [saucedemo](https://www.saucedemo.com/), using [Pytest](https://docs.pytest.org/en/stable/), 
+[selenium](https://www.selenium.dev/) and [allure](https://allurereport.org/docs/) for reporting.
+Repository have a general structure to help you organize and create frameworks from scratch.
+
+Made by Siarhei Stamal for Python Test Automation course.
 
 ## Project structure
 
@@ -43,26 +46,38 @@ Made by Siarhei Stamal for Python Test Automation course
 ### How to install
 
 1. Clone this repository
-   + `git clone <URL>`
+```bash
+    $ git clone <URL>
+```
 2. Create virtual environment, activate it:
-   + `pip install virtualenv`
-   + `cd ~/projects/pytest-framework`
-   + `virtualenv venv`
-   + `source venv/bin/activate`
+```bash
+    $ pip install virtualenv
+    $ cd ~/projects/pytest-framework
+    $ virtualenv venv
+    $ source venv/bin/activate
+```
 3. Install dependencies
-    + `pip install -r requirements.txt`
+```bash
+    $ pip install -r requirements.txt
+```
 
 ### How to run tests
 1. To execute ALL tests w/ DEBUG log level
-   + `pytest . --log-level=DEBUG`
-2. To execute ALL unit test suite
-   + `pytest . -m unittests`
-3. To execute ALL UI test cases
-   + `pytest . -m uitests`
-4. To execute smoke suite 
-   + `pytest . -m smoke`
-5. To execute UI tests in Firefox, headless mode 
-   + `pytest . -m uitests --browser=firefox --headless`
+```bash
+    $ pytest . --log-level=DEBUG
+```
+2. To execute ALL UI test cases
+```bash
+    $ pytest . -m uitests
+```
+3. To execute smoke suite 
+```bash
+    $ pytest . -m smoke
+```
+4. To execute UI tests in Firefox, headless mode 
+```bash
+    $ pytest . -m uitests --browser=firefox --headless
+```
 
 ### Available markers:
    + UI tests
