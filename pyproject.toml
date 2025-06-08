@@ -1,0 +1,94 @@
+[project]
+name = "pytest-framework-playwright"
+version = "0.0.1"
+description = "Demo project for demonstrating how to create and organise test automation framework"
+readme = "README.md"
+requires-python = ">=3.9"
+
+[tool.ruff]
+exclude = [
+    ".venv",
+    "tests"
+]
+output-format = 'github'
+line-length = 120
+
+[tool.mypy]
+install_types = true
+non_interactive = true
+ignore_missing_imports = true
+exclude = [
+    "venv",
+    "tests"
+]
+
+[tool.pylint.MASTER]
+argument-naming-style = "snake_case"
+variable-naming-style = "snake_case"
+function-naming-style = "snake_case"
+method-naming-style = "snake_case"
+module-naming-style = "snake_case"
+ignore-paths = [
+    'venv/*',
+    'tests/*'
+]
+disable = [
+    "raw-checker-failed",
+    "bad-inline-option",
+    "locally-disabled",
+    "file-ignored",
+    "suppressed-message",
+    "useless-suppression",
+    "deprecated-pragma",
+    "use-symbolic-message-instead",
+    "use-implicit-booleaness-not-comparison-to-string",
+    "use-implicit-booleaness-not-comparison-to-zero",
+    "empty-docstring",
+    "missing-module-docstring",
+    "missing-class-docstring",
+    "missing-function-docstring",
+    "no-else-return",
+    "too-few-public-methods"
+]
+
+[tool.flake8]
+max-line-length = 120
+count = true
+statistics = true
+show-source = true
+max-complexity = 10
+exclude = [
+    ".git",
+    "__pycache__",
+    "venv",
+    "tests"
+]
+extend-ignore = [
+    "E501"
+]
+
+[tool.pytest.ini_options]
+minversion = 7.0
+log_cli = true
+log_level = "INFO"
+log_format = "%(asctime)s::%(filename)s:%(lineno)s:: %(levelname)s %(message)s"
+log_date_format = "%Y-%m-%d %H:%M:%S"
+addopts = [
+    "-rxX",
+    "--clean-alluredir",
+    "--alluredir", "allure-results",
+    "--headless",
+    "--capture=sys",
+    "--browser", "chrome"
+]
+markers = [
+    "login: to execute all login tests.",
+    "login_success: to execute login tests with a user who is not locked out.",
+    "login_incorrect: to execute login tests with incorrect login credentials.",
+    "add_cart: to execute adding products to the cart.",
+    "product_page: to execute all product page related tests.",
+    "product_sort: to execute all product page tests related to sorting.",
+    "regression: to execute all regression test suite.",
+    "smoke: to execute all smoke test suite.",
+    "uitests: to execute all the UI test suite.",
+]
